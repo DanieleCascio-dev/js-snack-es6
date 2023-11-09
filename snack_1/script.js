@@ -19,13 +19,21 @@ const bicycles = [
 
 /* const [bike1, bike2, bike3] = bicycles; */
 const theLighter = isLess(bicycles[0], bicycles[1], bicycles[2]);
-const { name, weight } = theLighter;
-console.log(`La bici con peso minore è ${name} e pesa ${weight}`);
-/* bicycles.forEach((bike) => {
-  const { weight } = bike;
-  console.log(weight);
-  console.log(isLess(weight));
-}); */
+// const { name, weight } = theLighter;
+// console.log(`La bici con peso minore è ${name} e pesa ${weight}`);
+
+let lessWeight = bicycles[0].weight;
+
+bicycles.forEach((bike) => {
+  if (bike.weight < lessWeight) {
+    lessWeight = bike;
+  }
+});
+console.log(lessWeight);
+const { name, weight } = lessWeight;
+console.log(`La bici ${name} pesa ${weight} ed è la più leggera`);
+const resultElem = document.querySelector(".result");
+resultElem.innerHTML = `La bici ${name} pesa ${weight}kg ed è la più leggera`;
 
 /* FUNCTION */
 function isLess(a, b, c) {
