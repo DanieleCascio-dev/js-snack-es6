@@ -8,20 +8,25 @@
 const footballTeams = [
   {
     name: "Milan",
-    falli: Math.floor(Math.random() * 100) + 1,
-    punti: Math.floor(Math.random() * 100) + 1,
+    falli: 0,
+    punti: 0,
   },
   {
     name: "juve",
-    falli: Math.floor(Math.random() * 100) + 1,
-    punti: Math.floor(Math.random() * 100) + 1,
+    falli: 0,
+    punti: 0,
   },
   {
     name: "Inter",
-    falli: Math.floor(Math.random() * 100) + 1,
-    punti: Math.floor(Math.random() * 100) + 1,
+    falli: 0,
+    punti: 0,
   },
 ];
+
+footballTeams.forEach((team) => {
+  team.falli = Math.floor(Math.random() * 100) + 1;
+  team.punti = Math.floor(Math.random() * 100) + 1;
+});
 
 const newTeams = footballTeams.map((team) => {
   const { name, falli } = team;
