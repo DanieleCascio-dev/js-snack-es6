@@ -19,9 +19,8 @@ const bicycles = [
 
 /* const [bike1, bike2, bike3] = bicycles; */
 const theLighter = isLess(bicycles[0], bicycles[1], bicycles[2]);
-console.log(
-  `La bici con peso minore è ${theLighter.name} e pesa ${theLighter.weight}`
-);
+const { name, weight } = theLighter;
+console.log(`La bici con peso minore è ${name} e pesa ${weight}`);
 /* bicycles.forEach((bike) => {
   const { weight } = bike;
   console.log(weight);
