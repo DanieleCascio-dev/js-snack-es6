@@ -13,26 +13,23 @@ console.log(result);
 /* FUNCTION */
 
 function getSubArray(numbersArray, a, b) {
-  const newArray = [];
-  if (a > b) {
-    return console.log("a deve essere minore di b");
-  }
+  // const newArray = [];
+  // if (a > b) {
+  //   return console.log("a deve essere minore di b");
+  // }
 
-  numbersArray.forEach((num, index) => {
-    /*  if (index === a) {
-      newArray.push(num);
-    } */
-    if (index >= a && index <= b) {
-      newArray.push(num);
-    }
-    /* if (index === b) {
-      newArray.push(num);
-    } */
-  });
-  return newArray;
+  // numbersArray.forEach((num, index) => {
+  //   /*  if (index === a) {
+  //     newArray.push(num);
+  //   } */
+  //   if (index >= a && index <= b) {
+  //     newArray.push(num);
+  //   }
+  //   /* if (index === b) {
+  //     newArray.push(num);
+  //   } */
+  // });
+  // return newArray;
 
-  /* const newNumbersArray = numbersArray.filter((curNum, index) => {
-    index === a || (a < index && index < b) || index === b;
-  });
-  return newNumbersArray; */
+  return numbersArray.filter((curNum, index) => index >= a && index <= b);
 }
