@@ -23,11 +23,23 @@ const footballTeams = [
   },
 ];
 
-console.log(footballTeams);
-footballTeams.forEach((team) => {
+const newTeams = footballTeams.map((team) => {
   const { name, falli } = team;
-  console.log(name, falli);
+  return {
+    name,
+    falli,
+  };
 });
+console.log(newTeams);
+
+// console.log(footballTeams);
+// footballTeams.forEach((team) => {
+//   const { name, falli } = team;
+//   newTeams.push(name, falli);
+//   console.log(newTeams);
+// });
 
 /* const { name, falli } = footballTeams[0];
 console.log(name, falli); */
+
+/* Function */
