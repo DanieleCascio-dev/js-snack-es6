@@ -19,15 +19,20 @@ function getSubArray(numbersArray, a, b) {
   }
 
   numbersArray.forEach((num, index) => {
-    if (index === a) {
+    /*  if (index === a) {
+      newArray.push(num);
+    } */
+    if (index >= a && index <= b) {
       newArray.push(num);
     }
-    if (a < index && index < b) {
+    /* if (index === b) {
       newArray.push(num);
-    }
-    if (index === b) {
-      newArray.push(num);
-    }
+    } */
   });
   return newArray;
+
+  /* const newNumbersArray = numbersArray.filter((curNum, index) => {
+    index === a || (a < index && index < b) || index === b;
+  });
+  return newNumbersArray; */
 }
